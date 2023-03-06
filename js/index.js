@@ -86,12 +86,11 @@ function consultarPrecios() {
         alert(consultaPrecio)
         descontar(precioBase)
     }
-}
-
-consultarPrecios()
-
-const repetir = confirm("¿Desea consultar otros precios?")
+    const repetir = confirm("¿Desea consultar otros precios?")
     while(repetir) {
         consultarPrecios()
         break
     }
+}
+
+consultarPrecios()
