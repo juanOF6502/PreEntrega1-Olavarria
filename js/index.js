@@ -1,4 +1,5 @@
-const nombre = alert("Bienvenido a ART + DESING")
+const inicio = alert("Bienvenido a ART + DESING")
+let repetir = true
 
 const mensajeConsulta= "Ingrese el codigo del producto a consultar:\n" +
                         "1) Flowers in a Vase Print\n" +
@@ -86,11 +87,15 @@ function consultarPrecios() {
         alert(consultaPrecio)
         descontar(precioBase)
     }
-    const repetir = confirm("¿Desea consultar otros precios?")
+}
+
+function repetirConsulta() {
     while(repetir) {
         consultarPrecios()
-        break
+        repetir = confirm("¿Desea consultar otros precios?")
     }
 }
 
-consultarPrecios()
+repetirConsulta()
+
+
